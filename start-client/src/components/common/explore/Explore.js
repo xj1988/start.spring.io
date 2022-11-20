@@ -129,7 +129,7 @@ function Explore({ open, onClose, projectName, blob }) {
                             className='button'
                           >
                             <span className='button-content' tabIndex='-1'>
-                              <span>Download</span>
+                              <span>下载</span>
                             </span>
                           </a>
                           <CopyToClipboard
@@ -149,30 +149,28 @@ function Explore({ open, onClose, projectName, blob }) {
                             </a>
                           </CopyToClipboard>
                           {get(selected, 'language') === 'markdown' && (
-                            <>
-                              <a
-                                href='/#'
-                                onClick={e => {
-                                  e.preventDefault()
-                                  const newSelected = { ...selected }
-                                  newSelected.force = !get(
-                                    selected,
-                                    'force',
-                                    false
-                                  )
-                                  setSelected(newSelected)
-                                }}
-                                className='button'
-                              >
-                                <span className='button-content' tabIndex='-1'>
-                                  <span>
-                                    {get(selected, 'force', false)
-                                      ? 'Preview'
-                                      : 'View source'}
-                                  </span>
+                            <a
+                              href='/#'
+                              onClick={e => {
+                                e.preventDefault()
+                                const newSelected = { ...selected }
+                                newSelected.force = !get(
+                                  selected,
+                                  'force',
+                                  false
+                                )
+                                setSelected(newSelected)
+                              }}
+                              className='button'
+                            >
+                              <span className='button-content' tabIndex='-1'>
+                                <span>
+                                  {get(selected, 'force', false)
+                                    ? 'Preview'
+                                    : 'View source'}
                                 </span>
-                              </a>
-                            </>
+                              </span>
+                            </a>
                           )}
                         </div>
                       </div>
@@ -192,7 +190,7 @@ function Explore({ open, onClose, projectName, blob }) {
                     className='button'
                   >
                     <span className='button-content' tabIndex='-1'>
-                      <span>Download</span>
+                      <span>下载</span>
                       <span className='secondary desktop-only'>
                         {windowsUtils.symb} + ⏎
                       </span>
@@ -207,7 +205,7 @@ function Explore({ open, onClose, projectName, blob }) {
                     className='button'
                   >
                     <span className='button-content' tabIndex='-1'>
-                      <span>Close</span>
+                      <span>关闭</span>
                       <span className='secondary desktop-only'>ESC</span>
                     </span>
                   </a>

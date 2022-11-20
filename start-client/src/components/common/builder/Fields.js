@@ -14,7 +14,7 @@ import { Button, Radio } from '../form'
 import { Dependency } from '../dependency'
 import { InitializrContext } from '../../reducer/Initializr'
 
-const Fields = ({
+function Fields({
   onSubmit,
   onExplore,
   onShare,
@@ -22,12 +22,14 @@ const Fields = ({
   refSubmit,
   refDependency,
   generating,
-}) => {
+}) {
   const windowsUtils = useWindowsUtils()
   const { config, dispatch, dependencies } = useContext(AppContext)
-  const { values, dispatch: dispatchInitializr, errors } = useContext(
-    InitializrContext
-  )
+  const {
+    values,
+    dispatch: dispatchInitializr,
+    errors,
+  } = useContext(InitializrContext)
   const update = args => {
     dispatchInitializr({ type: 'UPDATE', payload: args })
   }
@@ -40,7 +42,7 @@ const Fields = ({
           <div className='col-sticky'>
             <div className='colset'>
               <div className='left'>
-                <Control text='Project'>
+                <Control text='项目构建方式'>
                   <Radio
                     name='project'
                     selected={get(values, 'project')}
@@ -52,7 +54,7 @@ const Fields = ({
                 </Control>
               </div>
               <div className='right'>
-                <Control text='Language'>
+                <Control text='开发语言'>
                   <Radio
                     name='language'
                     selected={get(values, 'language')}
@@ -65,7 +67,7 @@ const Fields = ({
               </div>
             </div>
 
-            <Control text='Spring Boot'>
+            <Control text='Spring Boot版本'>
               <Radio
                 name='boot'
                 selected={get(values, 'boot')}
@@ -90,7 +92,7 @@ const Fields = ({
                 </FieldError>
               )}
             </Control>
-            <Control text='Project Metadata'>
+            <Control text='项目基本信息'>
               <FieldInput
                 id='input-group'
                 value={get(values, 'meta.group')}
@@ -170,7 +172,7 @@ const Fields = ({
             refButton={refSubmit}
             disabled={generating}
           >
-            Generate
+            获取代码
           </Button>
         )}
         <Button
@@ -179,10 +181,10 @@ const Fields = ({
           hotkey='Ctrl + Space'
           refButton={refExplore}
         >
-          Explore
+          浏览代码
         </Button>
         <Button id='share-project' onClick={onShare}>
-          Share...
+          分享...
         </Button>
       </Actions>
     </>

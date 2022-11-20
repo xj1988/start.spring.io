@@ -15,7 +15,7 @@ function Dependency({ refButton }) {
   return (
     <div className='control'>
       <div className='dependency-header'>
-        <span className='label'>Dependencies</span>
+        <span className='label'>组件依赖</span>
         <Button
           id='explore-dependencies'
           onClick={event => {
@@ -28,13 +28,13 @@ function Dependency({ refButton }) {
           hotkey={`${windowsUtils.symb} + b`}
           refButton={refButton}
         >
-          Add <span className='desktop-only'>dependencies</span>...
+          <span className='desktop-only'>添加依赖</span>
         </Button>
       </div>
       {get(values, 'dependencies', []).length > 0 ? (
         <List />
       ) : (
-        <div className='no-dependency'>No dependency selected</div>
+        <div className='no-dependency'>没有选择依赖</div>
       )}
     </div>
   )

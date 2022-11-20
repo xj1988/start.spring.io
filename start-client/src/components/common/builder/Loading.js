@@ -11,28 +11,26 @@ export default function Loading() {
         <div className='left'>
           <div className='colset'>
             <div className='left'>
-              <Control text='Project'>
+              <Control text='项目构建方式'>
                 <Placeholder type='radio' width='97px' />
                 <Placeholder type='radio' width='98px' />
               </Control>
             </div>
             <div className='right'>
-              <Control text='Language'>
+              <Control text='开发语言'>
                 <Placeholder type='radio' width='30px' />
                 <Placeholder type='radio' width='36px' />
                 <Placeholder type='radio' width='40px' />
               </Control>
             </div>
           </div>
-          <Control text='Spring Boot'>
+          <Control text='Spring Boot版本'>
             <Placeholder type='radio' width='100px' />
             <Placeholder type='radio' width='98px' />
             <Placeholder type='radio' width='98px' />
-            <Placeholder type='radio' width='120px' />
-            <Placeholder type='radio' width='140px' />
             <Placeholder type='radio' width='98px' />
           </Control>
-          <Control text='Project Metadata'>
+          <Control text='项目基本信息'>
             <div>
               <div className='control control-inline control-placeholder'>
                 <span className='placeholder-label'>Group</span>
@@ -81,7 +79,7 @@ export default function Loading() {
         <div className='right'>
           <div className='control'>
             <div className='dependency-header'>
-              <span className='label'>Dependencies</span>
+              <span className='label'>组件依赖</span>
               <Placeholder className='placeholder-button-dep' type='button' />
             </div>
           </div>

@@ -5,9 +5,9 @@ import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock'
 
 import Header from './Header'
 import { AppContext } from '../../reducer/App'
-import { IconGithub, IconTwitter } from '../icons'
+import { IconGithub } from '../icons'
 
-const SideLeft = () => {
+function SideLeft() {
   const [isOpen, setIsOpen] = useState(false)
   const [lock, setLock] = useState(false)
   const wrapper = useRef(null)
@@ -72,15 +72,6 @@ const SideLeft = () => {
                 <IconGithub />
               </span>
             </a>
-            <a
-              rel='noreferrer noopener'
-              target='_blank'
-              href='https://twitter.com/springboot'
-            >
-              <span className='a-content' tabIndex='-1'>
-                <IconTwitter />
-              </span>
-            </a>
           </div>
         </div>
       </div>
@@ -100,16 +91,6 @@ const SideLeft = () => {
                   <Header />
                   <div>
                     <ul>
-                      <li>
-                        <a
-                          id='ql-help-projects'
-                          target='_blank'
-                          rel='noopener noreferrer'
-                          href='https://spring.io/projects'
-                        >
-                          Discover all the Spring projects
-                        </a>
-                      </li>
                       <li>
                         <a
                           id='ql-help-guides'
@@ -155,30 +136,19 @@ const SideLeft = () => {
                           </span>
                         </a>
                       </li>
-                      <li>
-                        <a
-                          rel='noreferrer noopener'
-                          target='_blank'
-                          href='https://twitter.com/springboot'
-                        >
-                          <span className='a-content' tabIndex='-1'>
-                            Twitter
-                          </span>
-                        </a>
-                      </li>
                     </ul>
                   </div>
                   <div className='copyright'>
-                    © 2013-{new Date().getFullYear()} VMware, Inc.
+                    © 2013-{new Date().getFullYear()}
                     <br />
-                    start.spring.io is powered by{' '}
+                    initializr is powered by{' '}
                     <span>
                       <a
                         target='_blank'
                         rel='noopener noreferrer'
-                        href='https://github.com/spring-io/initializr/'
+                        href='https://github.com/xj1988'
                       >
-                        Spring Initializr
+                        Xiong Jing
                       </a>
                     </span>{' '}
                     <span>and</span>{' '}
@@ -186,9 +156,9 @@ const SideLeft = () => {
                       <a
                         target='_blank'
                         rel='noopener noreferrer'
-                        href='https://run.pivotal.io/'
+                        href='https://spring.io/'
                       >
-                        Pivotal Web Services
+                        Spring Initializr
                       </a>
                     </span>
                   </div>

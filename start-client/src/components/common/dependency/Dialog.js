@@ -136,8 +136,8 @@ function Dialog({ onClose }) {
   const updateScroll = () => {
     const wrapperElement = get(wrapper, 'current')
     const dialogElement = get(dialog, 'current')
-    const selectedElement = wrapperElement.querySelector('a.selected')
-      .parentElement
+    const selectedElement =
+      wrapperElement.querySelector('a.selected').parentElement
     const position = selectedElement.offsetTop - wrapperElement.scrollTop
     if (position - 50 < 0 || position > dialogElement.clientHeight - 160) {
       const top = query.trim() === '' ? 50 : 10
@@ -245,7 +245,7 @@ function Dialog({ onClose }) {
                   </a>
                 </div>
                 <span className='help'>
-                  Press {windowsUtils.symb} for multiple adds{' '}
+                  按住 {windowsUtils.symb} 进行批量添加{' '}
                 </span>
               </div>
               <ul ref={wrapper}>
