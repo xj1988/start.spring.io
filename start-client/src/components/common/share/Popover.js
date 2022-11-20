@@ -58,12 +58,12 @@ function Popover({ shareUrl, open, onClose }) {
           <div className='popup-share'>
             <div className='popop-share-container' ref={wrapper}>
               <div className='popup-header'>
-                <h1>分享你的配置</h1>
+                <h1>分享您的配置</h1>
               </div>
               <div className='popup-content'>
                 {/* eslint-disable-next-line */}
                   <label htmlFor='input-share'>
-                  使用此链接可共享当前配置。如果您希望依赖我们的默认值，可以从URL中删除属性。
+                  使用此链接可分享当前配置。如果您希望依赖我们的默认值，可以从URL中删除您配置的属性。
                 </label>
                 <div className='control'>
                   <input
@@ -109,7 +109,7 @@ function Popover({ shareUrl, open, onClose }) {
                   className='button'
                 >
                   <span className='button-content' tabIndex='-1'>
-                    <span>Close</span>
+                    <span>关闭</span>
                     <span className='secondary desktop-only'>ESC</span>
                   </span>
                 </a>
